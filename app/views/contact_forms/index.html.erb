@@ -1,0 +1,22 @@
+<h2>Contact Forms</h2>
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div>
+   <% @contact_forms.each do |contact_form| %>
+    <div>
+      <p><%= contact_form.subject %></p>
+      <p><%= contact_form.message %></p>
+      <p><%= link_to 'Show', contact_form %></p>
+      <p><%= link_to 'Edit', edit_contact_form_path(contact_form) %></p>
+      <p><%= link_to 'Delete', contact_form, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+
+<br>
+
+<%= link_to 'Create a New Contact Form', new_contact_form_path %>

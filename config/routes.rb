@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contact_forms
   resources :tools
   resources :categories
   resources :guides
